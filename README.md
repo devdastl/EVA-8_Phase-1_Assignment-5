@@ -52,10 +52,31 @@ To get started with the repo is really easy. Follow below steps to run everythin
 ## Type of Normalizations
 
 ## Major modules
+Here we will discuss on some of the major modules like dataset preperation module, model architecture and how to perform different normalization, Training module and how to perform L1 regularization.
+<br>
+Below are the sub topics and we will go through some important points.
+#### Dataset preperation
+First start with dataset module and how we are preparing dataset:
+- We have a custom module `Dataset()` written in `components/data.py`. 
+- This module downloads the data from torchvision and creates a iterable object.
+- This module can also return dataloader of defined batch size.
+- We can also pass transforms to this module as arguments. We have defined some in `components/transform.py`
 
-### Dataset preperation
-### Model architecture
-### Training and evaluation
+#### Model architecture
+Second we have custom module `Net()` to define model arcitecture:
+- This module is written in `components/model.py`. Here we define our architecture.
+- We have function to decide which normalization to perform as shown below. 
+- Here we pass following for each normalization:
+        - `BatchNorm2d` - output channel number of previous convolution layer.
+        - `GroupNorm` - output channel number of previous convolution layer and group no. which is half of output channel.
+        - `LayerNorm` - output shape in [C,H,W] of previous convoluation. (NOTE: elementwise_affine=False) to minimize parameters.
+ ![Alt text](repo_util/model_snippet.JPG?raw=true "snippet")
+#### Training and evaluation
+We have custom module `TrainModel` defined in `training.py` which is responsible for executing forward and backward pass. In this module we have defined our **L1 regularization** in the loss function as shown below. It can be setup by passing Boolean while training.
+![Alt text](repo_util/train_snippet.JPG?raw=true "snippet")
+
+We also have custom module for testing/evaluating `TestModel` defined in `test.py`. Here we are saving misclassified images and labels for plotting them as shown in bleow snippet.
+![Alt text](repo_util/test_snippet.JPG?raw=true "snippet")
 
 ## Model graphs
 
