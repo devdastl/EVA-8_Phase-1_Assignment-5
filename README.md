@@ -135,3 +135,9 @@ In this section we will look into 10 misclassified images from all three model a
 ![Alt text](report/model3_misclassified.png?raw=true "snippet")
 
 ## Conclusion
+Following are the conclusion from this assignment 5.
+- adding L1 regularization reduces model with BN accuracy.
+- Layer Normalization can add a lot of parameters. We can avoid that by setting elementwise-affine to False.
+- Batch Normalization has very good perfromance among all.
+- After plotting misclassified images, we can perform more image augmentation to generate more rich data to achieve better test accruacy like removing random block of pixel, intensity changes on random pixel, etc.
+- We can create re-usable modules which can then be used to train multiple types of model in a single main file.
