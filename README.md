@@ -20,7 +20,7 @@ Below is a quick look on how the repository is setup:
 ```
 EVA-8_Phase-1_Assignment-5/
   |
-  ├── EVA-8_Phase-1_Assignment-5.ipynb    <- Main colab notebook which will call other modules and perform training
+  ├── EVA_Assignment-5.ipynb    <- Main colab notebook which will call other modules and perform training
   |
   ├── README.md                           <- The top-level README for developers using this project.
   |
@@ -45,7 +45,7 @@ EVA-8_Phase-1_Assignment-5/
 ```
 ### Getting started
 To get started with the repo is really easy. Follow below steps to run everything by your self:
-1. Open main notebook `EVA-8_Phase-1_Assignment-5.ipynb` and click on "open with cloab" option.
+1. Open main notebook `EVA_Assignment-5.ipynb` and click on "open with cloab" option.
 2. Run the first cell. This cell will git clone this repo so that all fucntions are available in your runtime.
 3. That's it! Now you can execute the cell and train this three models. Other detials are commented in the main notebook.
 
