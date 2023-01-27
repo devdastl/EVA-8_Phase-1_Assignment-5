@@ -49,4 +49,18 @@ To get started with the repo is really easy. Follow below steps to run everythin
 2. Run the first cell. This cell will git clone this repo so that all fucntions are available in your runtime.
 3. That's it! Now you can execute the cell and train this three models. Other detials are commented in the main notebook.
 
-## 
+## Type of Normalizations
+
+## Major modules
+
+### Dataset preperation
+### Model architecture
+### Training and evaluation
+
+## Model graphs
+
+## Misclassified images.
+### First model (Batch norm + L1 regularization)
+### Second model (Group Normalization)
+### Third model (Layer Normalization)
+## Conclusion
