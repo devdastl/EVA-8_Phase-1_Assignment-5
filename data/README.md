@@ -1,0 +1,1 @@
+We will dowload data from torchvision in this `./data` directory.
