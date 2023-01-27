@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 def plot_loss_accuracy(test1, test2, test3):
 
@@ -26,7 +27,7 @@ def plot_loss_accuracy(test1, test2, test3):
     plt.show()
 
 
-def get_misclassified(test_misc_img, test_misc_label, subtitle='misclassified images'):
+def plot_misclassified(test_misc_img, test_misc_label, subtitle='misclassified images'):
 # Set the number of rows and columns for the plot
   num_rows = 5
   num_cols = 2
@@ -47,5 +48,7 @@ def get_misclassified(test_misc_img, test_misc_label, subtitle='misclassified im
       axes[row, col].axis('off')
       
   plt.suptitle(subtitle)
-  plt.savefig(subtitle + ".png")
+  if not os.path.exists("report"):
+      os.makedirs("report")
+  plt.savefig("report/" + subtitle + ".png")
   plt.show()
