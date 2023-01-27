@@ -48,8 +48,6 @@ class TrainModel():
 
   def l1_loss(self, l1_lambda):
 
-    print("using l1_loss")
-
     l1_reg = None
     for param in self.model.parameters():
       if l1_reg is None:
