@@ -1,3 +1,5 @@
+# transforms for training and testing is defined here
+
 import torch
 from torchvision import transforms
 

@@ -1,6 +1,9 @@
+# Utility function to plot graphs and misclassified image.
+
 import matplotlib.pyplot as plt
 import os
 
+#function to plot loss & accuracy graph.
 def plot_loss_accuracy(test1, test2, test3):
 
     # Model 1
@@ -27,6 +30,7 @@ def plot_loss_accuracy(test1, test2, test3):
     plt.show()
 
 
+#function to plot misclassified images.
 def plot_misclassified(test_misc_img, test_misc_label, subtitle='misclassified images'):
 # Set the number of rows and columns for the plot
   num_rows = 5

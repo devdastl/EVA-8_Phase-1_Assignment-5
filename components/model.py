@@ -1,3 +1,5 @@
+# custom module to build network architecture
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -73,6 +75,7 @@ class Net(nn.Module):
             nn.AvgPool2d(kernel_size=5)
         ) # output_size = 1x1x10 
 
+    #function which setup normalization type based on string input arguments.
     def norm_type(self, feature, map_shape):
       norm_t = self.norm
       group = int(feature/2)

@@ -1,3 +1,5 @@
+#custom model to run test or evaluation loop 
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -25,7 +27,7 @@ class TestModel():
             test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
             pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
 
-            for i in range(len(pred)):
+            for i in range(len(pred)): #loop through prediction and append wrong prediction one
               if pred[i] != target[i] and len(self.test_misc_img) != 10:
                 self.test_misc_img.append(data[i])
                 self.test_misc_label.append((pred[i].item(), target[i].item()))

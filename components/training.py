@@ -1,3 +1,5 @@
+#custom module to run training loop
+
 import torch
 import torch.nn as nn
 from tqdm import tqdm
@@ -45,7 +47,7 @@ class TrainModel():
         pbar.set_description(f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
       self.train_acc.append(100*correct/processed)
 
-
+  # function to implement L1 regularization
   def l1_loss(self, l1_lambda):
 
     l1_reg = None
